@@ -3,30 +3,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
   <title>Weather Application</title>
 </head>
-<body>
+<body class="">
   <div class="container my-5 mx-auto">
-    <h1 class="text-light text-center my-4">Informações do Clima</h1>
+    <h1 class="text-light text-center my-4">Informações<br> do Clima</h1>
 
     <form data-js="change-location" class="my-4 text-center text-white-50">
       <label for="city">Insira o nome de uma cidade</label>
       <input class="form-control p-4" type="text" name="city" placeholder="Ex: Miami" autofocus>
     </form>
 
-    <div class="card shadow-lg rounded">
+    <div data-js="city-card" class="d-none card shadow-lg rounded">
       <img data-js="time" src="https://via.placeholder.com/400x300" class="card-img-top">
       
-      <div data-js="time-icon" class="bg-light mx-auto text-center"></div>
+      <div data-js="time-icon" class="time-icon bg-light mx-auto text-center"></div>
       
       <div data-js="weather-details" class="text-muted text-uppercase text-center">
-        <h5 class="my-3">Nome da Cidade</h5>
+        <h5 data-js="city-name" class="my-3">Nome da Cidade</h5>
         
-        <div class="my-3">Clima</div>
+        <div data-js="city-weather" class="my-3">Clima</div>
         
-        <div class="display-4 my-4">
-          <span>00</span>
+        <div  class="display-4 my-4">
+          <span data-js="city-temperature">00</span>
           <span>&deg;C</span>
         </div>
       </div>
